@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1523</width>
+    <height>916</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="left_Frame">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>721</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>900</height>
+    </size>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>341</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="two_photon_series_grid_1">
+     <item row="1" column="0">
+      <widget class="QLabel" name="two_photon_series_lbl">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Two Photon Series&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>671</width>
+      <height>651</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="two_photon_series_part1_grid">
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="bits_per_pixel_le"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="unit_lbl">
+       <property name="text">
+        <string>Unit</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="bits_per_pixel_lbl">
+       <property name="text">
+        <string>Bits Per Pixel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="field_of_view_lbl">
+       <property name="text">
+        <string>Field of View</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="dimension_lbl">
+       <property name="text">
+        <string>Dimension</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="pmt_gain_lbl">
+       <property name="text">
+        <string>PhotoMultiplier Gain</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPlainTextEdit" name="comments_pte">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>170</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="comments_lbl">
+       <property name="text">
+        <string>Comments</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="name_lbl">
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="name_le"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="field_of_view_le"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPlainTextEdit" name="description_pte">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>146</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="unit_le"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="description_le">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="pmt_gain_le"/>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="dimension_le"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>30</y>
+     <width>1200</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1200</width>
+     <height>900</height>
+    </size>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>491</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="two_photon_part2_grid">
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="starting_frame_le"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="conversion_le"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="starting_time_le"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="rate_le"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="conversion_lbl">
+       <property name="text">
+        <string>Conversion</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="control_description_le"/>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="scan_line_rate_le"/>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="control_le"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="rate_lbl">
+       <property name="text">
+        <string>Rate</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="scan_line_rate">
+       <property name="text">
+        <string>Scan Line Rate</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="starting_time_lbl">
+       <property name="text">
+        <string>Starting Time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="control_description_lbl">
+       <property name="text">
+        <string>Control Description</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="resolution_le"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="resolution_lbl">
+       <property name="text">
+        <string>Resolution</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="control_lbl">
+       <property name="text">
+        <string>Control</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="starting_frame_lbl">
+       <property name="text">
+        <string>Starting Frame</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>520</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="objects_in_file_grid_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="objects_in_file_lbl">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Objects in File&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>441</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="two_photon_series_grid">
+     <item row="0" column="0">
+      <widget class="QLabel" name="two_photon_series2_grid">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Two Photon Series&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="update_btn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>700</y>
+      <width>150</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Update/Verify</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_btn">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>700</y>
+      <width>150</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>590</y>
+      <width>521</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="objects_in_file_grid">
+     <item row="1" column="0">
+      <widget class="QLabel" name="path_to_image_stack_lbl">
+       <property name="text">
+        <string>Path to Image Stack:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="path_to_stack_updates_lbl">
+       <property name="text">
+        <string>path_to_stack_updates</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="imaging_plane_updates_lbl">
+       <property name="text">
+        <string>imaging_plane_updates</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="imaging_plane_lbl">
+       <property name="text">
+        <string>Imaging Plane:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

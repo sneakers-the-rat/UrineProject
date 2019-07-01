@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="step2_gb">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>341</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Step 2: Image and Plane Segmentation</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>331</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="step2_grid">
+     <item row="2" column="0">
+      <widget class="QLabel" name="image_stacks_cb_lbl">
+       <property name="text">
+        <string>Image Stacks your 
+ROI applies to:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="image_stacks_cb"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="name2_le"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="description2_lbl">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="name2_lbl">
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="id_lbl">
+       <property name="text">
+        <string>ID (Table Identifiers)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="id_le"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPlainTextEdit" name="description2_pte">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>80</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="step4_gb">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>40</y>
+     <width>481</width>
+     <height>771</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Step 4: ROI Response Series</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>431</width>
+      <height>731</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="roi_response_series_grid">
+     <item row="7" column="0">
+      <widget class="QLabel" name="comments_lbl">
+       <property name="text">
+        <string>Comments</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="name3_lbl">
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="name3_le"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="description3_lbl">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="rate_lbl">
+       <property name="text">
+        <string>Rate</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="starting_time_lbl">
+       <property name="text">
+        <string>Starting Time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="resolution_lbl">
+       <property name="text">
+        <string>Resolution</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="conversion_lbl">
+       <property name="text">
+        <string>Conversion</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="unit_lbl">
+       <property name="text">
+        <string>Unit</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="control_description_le"/>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="rate_le"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="unit_le"/>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="starting_time_le"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="conversion_le"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="resolution_le"/>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="control_lbl">
+       <property name="text">
+        <string>Control</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="control_le"/>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="control_description_lbl">
+       <property name="text">
+        <string>Control Desciption</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPlainTextEdit" name="description3_pte">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>80</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QPlainTextEdit" name="comments_pte">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>80</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="add_roi_gb">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>851</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>900</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777214</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="title">
+    <string>Add ROIs</string>
+   </property>
+   <widget class="QPushButton" name="update_btn">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>800</y>
+      <width>150</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Update/Verify</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="step3_gb">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>560</y>
+      <width>341</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Step 3: Upload Mask and dF/F</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>331</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="roi_type_grid">
+      <item row="0" column="1">
+       <widget class="QToolButton" name="mask_upload_tool">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="mask_upload_lbl">
+        <property name="text">
+         <string>Upload  ROI Pixel, Voxel, Image Mask</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="mask_selector_lbl">
+        <property name="text">
+         <string>Select Mask Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="mask_selector_cb">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>24</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Image Mask</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Voxel Mask</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pixel Mask</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QToolButton" name="dff_upload_tool">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="dff_label">
+        <property name="text">
+         <string>Upload dF/F Trace:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="step1_gb">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>341</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Step 1: Create Processing Module</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>331</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="step1_grid">
+      <item row="0" column="0">
+       <widget class="QLabel" name="name1_lbl">
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="description1_lbl">
+        <property name="text">
+         <string>Description</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="description1_le"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="name1_le"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="create_btn">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>150</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Create</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="file_contents_gb">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>30</y>
+     <width>511</width>
+     <height>1000</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>900</height>
+    </size>
+   </property>
+   <property name="title">
+    <string>File Contents</string>
+   </property>
+   <widget class="QTableWidget" name="roi_table">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>450</width>
+      <height>202</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>450</width>
+      <height>200</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777211</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="rowCount">
+     <number>5</number>
+    </property>
+    <property name="columnCount">
+     <number>3</number>
+    </property>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <column>
+     <property name="text">
+      <string>ID (region)</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Description</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="save_btn">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>790</y>
+      <width>150</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>30</y>
+     <width>20</width>
+     <height>811</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <zorder>add_roi_gb</zorder>
+  <zorder>step2_gb</zorder>
+  <zorder>step4_gb</zorder>
+  <zorder>file_contents_gb</zorder>
+  <zorder>line</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

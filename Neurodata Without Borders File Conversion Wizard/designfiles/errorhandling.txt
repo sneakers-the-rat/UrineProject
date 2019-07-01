@@ -1,0 +1,28 @@
+Error Handling:
+
+HeaderScreen
+Check for .mat with headerfile. If missing, warn and let them proceed.
+Warn if verify/update hasn't been clicked.  Offer to click it.
+
+Subject Table
+Warn if verify/update hasn't been clicked. Offer to click it.
+
+TwoPhoton step 1
+Check for .mat with imaging_plane. If missing, warn and let them proceed.
+Warn if verify/update hasn't been clicked. Offer to click it.
+
+2Photon Step2
+check for .tiff or .tif
+Warn if verify/update hasn't been clicked. Offer to click it.
+
+
+2Photon Step3
+Warn if verify/update hasn't been clicked. Offer to click it.
+
+Ephys Step1
+check for .mat
+Warn if verify/update hasn't been clicked. Offer to click it.
+
+Ephys Step2
+check for .mat with electrode_meta_data
+Warn if verify/update hasn't been clicked. Offer to click it.

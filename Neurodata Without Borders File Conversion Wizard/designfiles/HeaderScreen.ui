@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1452</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>1</width>
+    <height>4</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>0</number>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1401</width>
+     <height>821</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>10</y>
+      <width>16</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>15</y>
+      <width>341</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="column_1">
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="keywords_le"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="experimenter_lbl">
+       <property name="text">
+        <string>Experimenter</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="relatedpublications_le"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="protocol_le"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="institution_le"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="experimenter_le"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="protocol_lbl">
+       <property name="text">
+        <string>Protocol</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="institution_lbl">
+       <property name="text">
+        <string>Institution</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="lab_lbl">
+       <property name="text">
+        <string>Lab</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="related_publications_lbl">
+       <property name="text">
+        <string>Related 
+publications</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="keywords_lbl">
+       <property name="text">
+        <string>Keywords</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lab_le"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>10</y>
+      <width>401</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="column_2">
+     <item row="0" column="1">
+      <widget class="QPlainTextEdit" name="notes_pte"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="notes_lbl">
+       <property name="text">
+        <string>Notes</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="experiment_description_lbl">
+       <property name="text">
+        <string>Experiment 
+Description</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPlainTextEdit" name="experiment_description_pte"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="Line" name="line_1">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>10</y>
+      <width>16</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>10</y>
+      <width>571</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="column_3" columnminimumwidth="200,200">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="session_id_lbl">
+       <property name="text">
+        <string>Session ID</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="pharmacology_lbl">
+       <property name="text">
+        <string>Pharmacology</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="timestamps_reference_time_lbl">
+       <property name="text">
+        <string>Timestamps Reference Time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="surgery_lbl">
+       <property name="text">
+        <string>Surgery</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="session_id_le"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="surgery_le"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="virus_le"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="pharmacology_le"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="virus_lbl">
+       <property name="text">
+        <string>Virus</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDateTimeEdit" name="timestamps_reference_time_dte">
+       <property name="dateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>2000</year>
+         <month>1</month>
+         <day>1</day>
+        </datetime>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy/MM/dd h:mm AP</string>
+       </property>
+       <property name="timeSpec">
+        <enum>Qt::TimeZone</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPlainTextEdit" name="session_description_pte"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="session_start_time_lbl">
+       <property name="text">
+        <string>Session Start Time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QDateTimeEdit" name="session_start_time_dte">
+       <property name="dateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>2000</year>
+         <month>1</month>
+         <day>1</day>
+        </datetime>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy/MM/dd h:mm AP</string>
+       </property>
+       <property name="timeSpec">
+        <enum>Qt::TimeZone</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="session_description_lbl">
+       <property name="text">
+        <string>Session
+Description</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="update_btn">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>540</y>
+      <width>150</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>11</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Update/Verify</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

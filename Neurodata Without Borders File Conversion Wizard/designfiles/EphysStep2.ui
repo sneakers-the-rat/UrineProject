@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>982</width>
+    <height>865</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="add_electrode_group_gb">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>471</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Add Electrode Group</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>19</y>
+      <width>441</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="add_electrode_group_grid">
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="location_le"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="electrode_name_lbl">
+       <property name="text">
+        <string>Electrode Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="description_lbl">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="description_le"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="location_lbl">
+       <property name="text">
+        <string>Location</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="electrode_name_le"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="device_le"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="device_lbl">
+       <property name="text">
+        <string>Device</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="add_electrode_gb">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>360</y>
+     <width>471</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Add Electrode</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>340</y>
+      <width>101</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="x_grid">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="x_le"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="x_lbl">
+       <property name="text">
+        <string>    x </string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>340</y>
+      <width>101</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="y_grid">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="y_le"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="y_lbl">
+       <property name="text">
+        <string>    y </string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_7">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>340</y>
+      <width>101</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="z_grid">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="z_le"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="z_lbl">
+       <property name="text">
+        <string>   z </string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>441</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="add_electrode_grid">
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="filtering_le"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="id_le"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="filtering_lbl">
+       <property name="text">
+        <string>Filtering</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="id_lbl">
+       <property name="text">
+        <string>ID </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="location_le_2"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="location_lbl_2">
+       <property name="text">
+        <string>Location</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="imp_le"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="imp_lbl">
+       <property name="text">
+        <string>Impedance</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QTableWidget" name="electrode_table">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>70</y>
+     <width>441</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Region</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Description</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="update_btn">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>630</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Update/Verify</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>471</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Add electrode meta data&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

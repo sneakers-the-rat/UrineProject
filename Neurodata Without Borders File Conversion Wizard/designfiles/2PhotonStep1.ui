@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1147</width>
+    <height>668</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1111</width>
+     <height>800</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>20</y>
+      <width>20</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>361</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="column_1">
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="description_le2"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="emission_lambda_lbl">
+       <property name="text">
+        <string>Emission Lamda</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="description_lbl2">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="name_le2"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="emission_lambda_le"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="name_lbl2">
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>120</y>
+      <width>441</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="column_2">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item row="9" column="0">
+      <widget class="QLabel" name="location_lbl">
+       <property name="text">
+        <string>Location</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="location_le"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="indicator_lbl">
+       <property name="text">
+        <string>Indicator</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="unit_le"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="unit_lbl">
+       <property name="text">
+        <string>Unit</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="reference_frame_lbl">
+       <property name="text">
+        <string>Reference Frame</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="device_le"/>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="conversion_le"/>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="reference_frame_le"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="conversion_lbl">
+       <property name="text">
+        <string>Conversion</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="indicator_le"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="imaging_rate_le"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="excitation_lambda_lbl">
+       <property name="text">
+        <string>Excitation Lamda</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="name_lbl">
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="device_lbl">
+       <property name="text">
+        <string>Device</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="excitation_lambda_le"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="description_le"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="description_lbl">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="imaging_rate_lbl">
+       <property name="text">
+        <string>Imaging Rate</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="name_le"/>
+     </item>
+     <item row="11" column="1">
+      <widget class="QPushButton" name="update_btn">
+       <property name="text">
+        <string>Update/Verify</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLineEdit" name="manifold_le"/>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="manifold_lbl">
+       <property name="text">
+        <string>Manifold</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>302</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="optical_channe_lbl_grid">
+     <item row="0" column="0">
+      <widget class="QLabel" name="optical_channel_lbl">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777211</width>
+         <height>189</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Optical Channel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>20</y>
+      <width>441</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="imaging_plane_lbl_grid">
+     <item row="0" column="0">
+      <widget class="QLabel" name="optical_channel_lbl_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>189</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Imaging Plane&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
