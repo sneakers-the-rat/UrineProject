@@ -4,7 +4,7 @@ This python script is a wizard which converts fluorescent imaging data and "McCo
 
 All Users:
 
-When using this code, be aware that the Spike2 naming convention has been used to extract values from the structs.  The code on <line #> should be updated with your lab's naming conventions. If you want to adopt NWB naming conventions, this is a good starting place: https://pynwb.readthedocs.io/en/stable/pynwb.file.html#pynwb.file.NWBFile
+When using this code, be aware that the Spike2 naming convention has been used to extract values from the structs.  The code starting on line #3066 should be updated with your lab's naming conventions. If you want to adopt NWB naming conventions, this is a good starting place: https://pynwb.readthedocs.io/en/stable/pynwb.file.html#pynwb.file.NWBFile
 
 Installation:
 <List of libraries to install>
