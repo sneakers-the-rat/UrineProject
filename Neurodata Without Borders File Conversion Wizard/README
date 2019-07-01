@@ -1,1 +1,11 @@
-#Project2 README
+#Neurodata Without Borders file conversion Wizard README
+
+This python script is a wizard which converts fluorescent imaging data and "McCormick style" data into Neurodata Without Borders format.  The Wizard can convert .tiff stacks and .mat Matlab files which contain long form data inside of structs.  The Wizard expects to receive experimental metadata from NWB formatted structs in the template .mat files.  Templates can be found in the templates and example data folder.
+
+All Users:
+
+When using this code, be aware that the Spike2 naming convention has been used to extract values from the structs.  The code on <line #> should be updated with your lab's naming conventions. If you want to adopt NWB naming conventions, this is a good starting place: https://pynwb.readthedocs.io/en/stable/pynwb.file.html#pynwb.file.NWBFile
+
+Installation:
+<List of libraries to install>
+The designfiles folder needs to live in the same directory as wizard.py.
