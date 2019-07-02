@@ -84,7 +84,7 @@ class MagicWizard(QtWidgets.QWizard):
         self.addPage(Welcome(self))
         self.addPage(HeaderScreen(self))
         self.addPage(SubjectTable(self))
-        self.addPage(Welcome2(self))
+        #self.addPage(Welcome2(self))
         self.addPage(WidefieldStep1(self))
         self.addPage(WidefieldStep2(self))
         self.addPage(WidefieldStep3(self))
@@ -1784,7 +1784,9 @@ class WidefieldStep3(QtWidgets.QWizardPage):
         module_list = [fluorescence, dff]
 
         nwbfile.add_processing_module(module_list)
-        with NWBHDF5IO(identifier + '.nwb', 'w') as io:
+        identifier = str(identifier) + '.nwb'
+        
+        with NWBHDF5IO(identifier, 'w') as io:
             io.write(nwbfile)
         print(nwbfile)
         self.save_btn.setText("Saved")
@@ -3324,9 +3326,9 @@ class MatlabStep2(QtWidgets.QWizardPage):
                 if value == 'times':
                     #NWB values = data
                     
-                    timestamps = alignment_timeseries_dict[struct][value][0]
+                    data = alignment_timeseries_dict[struct][value][0]
                     #data = hdmf.data_utils.DataChunkIterator(data)
-                    print(timestamps)
+                    print(data)
                     print('the above is the timestamps for this alignment')
                     print('')
 
@@ -3340,9 +3342,9 @@ class MatlabStep2(QtWidgets.QWizardPage):
 
             aligment_timeseries = pynwb.base.TimeSeries(
                 name,
-                #data = data,
-                #unit = unit,
-                timestamps = timestamps,                            
+                data = data,
+                unit = 'missing',
+                timestamps = data, #The McCormick data doesn't fit well, but would be good to save.  'Data' is doing double duty in timestamps and data to prevent validation errors.                           
                 #starting_time = float(starting_time),
                 #rate = float(rate),
                 resolution = resolution,
@@ -3424,7 +3426,8 @@ class MatlabStep2(QtWidgets.QWizardPage):
 
     #Write to file
         global identifier
-        with NWBHDF5IO(identifier + '.nwb', 'w') as io:
+        identifier = identifier + '.nwb'
+        with NWBHDF5IO(identifier, 'w') as io:
             io.write(nwbfile)
         print(nwbfile)
 
