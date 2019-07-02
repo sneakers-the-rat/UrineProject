@@ -100,6 +100,7 @@ class MagicWizard(QtWidgets.QWizard):
 
         #global variable goes here?  This was necessary when saving nwbfile in 2PhotonStep2
         global nwbfile
+        
       
 
 #code for the Welcome page
@@ -866,8 +867,11 @@ class WidefieldStep1(QtWidgets.QWizardPage):
         indicator = indicator[0]
         location = imaging_plane_dictionary[0,0]['location']
         location = location[0]
-        manifold = imaging_plane_dictionary[0,0]['manifold']
-        manifold = manifold[0]
+        manifold_x = imaging_plane_dictionary[0,0]['manifold_x']
+        manifold_y = imaging_plane_dictionary[0,0]['manifold_y']
+        #manifold = manifold[0]
+        global manifold
+        manifold = np.ones((int(manifold_x), int(manifold_y), 3))
         conversion  = imaging_plane_dictionary[0,0]['conversion']
         conversion = conversion[0]
         unit = imaging_plane_dictionary[0,0]['unit']
@@ -904,6 +908,7 @@ class WidefieldStep1(QtWidgets.QWizardPage):
               
         global optical_channel
         global imaging_plane
+        global manifold
         optical_channel = pynwb.ophys.OpticalChannel(
             str(self.name_le2.text()),
             description = str(self.description_le2.text()),
@@ -919,7 +924,7 @@ class WidefieldStep1(QtWidgets.QWizardPage):
             imaging_rate = float(self.imaging_rate_le.text()),
             indicator = str(self.indicator_le.text()),
             location = str(self.location_le.text()),
-            manifold = self.manifold_le.text().split(","),
+            manifold = manifold,
             conversion = float(self.conversion_le.text()),
             unit = str(self.unit_le.text()),
             reference_frame = str(self.reference_frame_le.text())
@@ -1675,8 +1680,11 @@ class WidefieldStep3(QtWidgets.QWizardPage):
  
         #2 Add ROI to plane segmentation
         #Deterimine the type of ROI and add it to the plane segmentation
+        global roi_array
+        
+
         roi_type = str(self.mask_selector_cb.currentText()).lower()
-        plane_segmentation.add_roi(image_mask = [(0, 0, 1.1), (1, 1, 1.2), (2, 2, 1.3)])
+        plane_segmentation.add_roi(image_mask = roi_array)
         print(plane_segmentation)
 
         #3) Create ROI table Region
@@ -1684,21 +1692,15 @@ class WidefieldStep3(QtWidgets.QWizardPage):
         #This shouldn't be hard coded, but it needs to be tested with software that does something with the table region.
         global region
 
-        name = '1st ROI Region'
-        region = [0]
+        
         description = 'My ROI table region'
 
-        table_region = plane_segmentation.create_roi_table_region(
-            description, 
-            region, 
-            name)
-        
-        
+        table_region = plane_segmentation.create_roi_table_region('My ROI', region=[0])
+  
         self.roi_table.insertRow(1)
 
         self.roi_table.setItem(1 , 0, QtWidgets.QTableWidgetItem(str(region)))
-        self.roi_table.setItem(1 , 1, QtWidgets.QTableWidgetItem(str(name)))
-        self.roi_table.setItem(1 , 2, QtWidgets.QTableWidgetItem(str(description)))
+        self.roi_table.setItem(1 , 2, QtWidgets.QTableWidgetItem(self.description2_pte.toPlainText()))
 
         #4:Create fluorescence module and add a data interface
         global fluorescence
@@ -1707,7 +1709,7 @@ class WidefieldStep3(QtWidgets.QWizardPage):
         
         #5: Create ROI Response series.  Code gets values for ROI Response Series and pass to NWB class
         
-        global roi_array
+        
         
         roi_response_series = fluorescence.create_roi_response_series(
             str(self.name3_le.text()),
@@ -3454,6 +3456,7 @@ if __name__ == '__main__':
     session_description = ''
     two_photon_metadata = ''
     two_photon_series = ''
+    manifold = ''
     optical_channel = ''
     imaging_plane = ''
     image_sgementation = ''
