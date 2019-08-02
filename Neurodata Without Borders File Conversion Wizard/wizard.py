@@ -1,17 +1,13 @@
 from PyQt5 import QtCore
-#from PyQt5 import QtGui
-#from PyQt5.QtCore import *
 from PyQt5 import QtWidgets
-#from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QWidget, QLineEdit, QFileDialog, QPushButton, QTreeWidget, QScrollArea
 from PyQt5.QtCore import QDate, QTime, QDateTime
-#from PyQt5.QtCore import pyqtSlot
-#import scipy as sio
+
 import scipy.io
 import pynwb 
-#from pynwb import NWBFile
+
 from pynwb import NWBHDF5IO
-#from datetime import datetime
+
 import datetime
 from dateutil.tz import tzlocal
 import numpy as np
@@ -19,6 +15,8 @@ import h5py
 import hdmf
 #For error handling:
 from designfiles.file_verify import Ui_file_verify_dialog
+
+# TODO: Not sure why these classes are necessary?
 
 #class for the QT Combo Box
 class QIComboBox(QtWidgets.QComboBox):
@@ -145,6 +143,7 @@ class Welcome(QtWidgets.QWizardPage):
         self.openFileNameDialog()                
         print(self.fileName)        
         
+        # TODO: This looks very brittle to me - surely we should verify the structure of the headerfile rather than its filename? in this case even if it was named 'headerfile' it would fail.
         if 'Headerfile.mat' not in self.fileName:
             file_verify_dialog = QtWidgets.QDialog()
             ui = Ui_file_verify_dialog()
@@ -155,6 +154,7 @@ class Welcome(QtWidgets.QWizardPage):
                 return
             else:
                 print('File name verified')
+                # TODO: the other 'else' starting below won't be called in this case, is that what we want?
         else:
             global headerfilename
             headerfilename = self.fileName        
@@ -163,14 +163,59 @@ class Welcome(QtWidgets.QWizardPage):
             identifier = identifier
             print(identifier)
 
+
         
-        
+class HeaderScreen_example(QtWidgets.QWizardPage):
+    def __init__(self, parent=None):
+        super(HeaderScreen, self).__init__(parent)
+
+        # this should be done with the rest of the object instantiation
+        self.update_btn = QtWidgets.QPushButton(frame)
+        self.update_btn.setGeometry(QtCore.QRect(1260, 540, 150, 32))
+        self.update_btn.setMinimumSize(QtCore.QSize(0, 11))
+        self.update_btn.setObjectName("update_btn")
+
+        self.retranslateUi(self)
+        QtCore.QMetaObject.connectSlotsByName(self)
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+
+    def load_header(self):
+        global headerfilename
+        headerinformation = scipy.io.loadmat(headerfilename)
+        #scipy.io.whosmat(headerinformation)
+
+        header = headerinformation['headerfile'][0,0]
+
+        # make a dictionary to stash the fields of the .mat file
+        header_dict = {}
+
+        # .dtype.names stores field names
+        for name in header.dtype.names:
+            header_dict[name] = header[name][0]
+
+        self.header_dict = header_dict
+
+    def initializePage(self):
+        self.load_header()
+
+        self.layout = QtWidgets.QFormLayout()
+
+        for k, v in self.header_dict.items():
+            self.layout.addRow(QtWidgets.QLabel(k), QtWidgets.QLineEdit(v))
+
+        self.setLayout(self.layout)
+
 
 #code for the Header Screen
 class HeaderScreen(QtWidgets.QWizardPage):
     def __init__(self, parent=None):
         super(HeaderScreen, self).__init__(parent)
         
+        # TODO: Need way more comments explaining this
+
         self.setObjectName("Dialog")
         self.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.setSizeIncrement(QtCore.QSize(1, 4))
@@ -339,10 +384,24 @@ class HeaderScreen(QtWidgets.QWizardPage):
         "Description"))
         self.update_btn.setText(_translate("Dialog", "Update/Verify"))
 
-        
+    def load_header(self):
+        global headerfilename
+        headerinformation = scipy.io.loadmat(headerfilename)
+        #scipy.io.whosmat(headerinformation)
 
+        header = headerinformation['headerfile'][0,0]
+
+        # make a dictionary to stash the fields of the .mat file
+        header_dict = {}
+
+        # .dtype.names stores field names
+        for name in header.dtype.names:
+            header_dict[name] = header[name][0]
+
+        self.header_dict = header_dict
     
     def initializePage(self):
+
 
         #Passing Matlab Headerfile
         global headerfilename
@@ -373,6 +432,7 @@ class HeaderScreen(QtWidgets.QWizardPage):
         session_description = session_description[0]
         session_id = headerdictionary[0,0]['Session_ID']
         session_id = session_id[0]
+
         
         timestamps_reference_time = headerdictionary[0,0]['timestamps_reference_time']
         timestamps_reference_time = str(timestamps_reference_time)
@@ -386,7 +446,6 @@ class HeaderScreen(QtWidgets.QWizardPage):
         session_start_time = session_start_time[2:-2]
         session_start_time_object = datetime.datetime.strptime(session_start_time,'%Y-%m-%d %H:%M:%S.%f%z')        
         self.session_start_time_dte.setDisplayFormat('yyyy-MM-dd hh:mm:ss.zzzzzz t')
-        print(session_start_time)
 
         surgery = headerdictionary[0,0]['Surgery']
         surgery = surgery[0]
@@ -818,6 +877,8 @@ class WidefieldStep1(QtWidgets.QWizardPage):
         self.openFileNameDialog()
 
         #File name verification error handling
+
+        # TODO: Again - shouldn't verify based on filenames, but rather file contents
 
         if 'TwoPhotonMetaData.mat' not in self.fileName:
             file_verify_dialog = QtWidgets.QDialog()
@@ -2062,6 +2123,46 @@ class MatlabStep1(QtWidgets.QWizardPage):
         self.fileName, _ = QFileDialog.getOpenFileName(self,"Select Ephys Meta Data", "","All Files (*);;Python Files (*.py)", options=options)
         if self.fileName:
             print(self.fileName) 
+
+
+class MatlabStep2_example(QtWidgets.QWizardPage):
+    N_OVERWRITE = 25
+    N_CB = 25
+
+    def __init__(self, parent=None):
+        super(MatlabStep2_example, self).__init__(parent)
+
+        self.layout = QtWidgets.QGridLayout()
+
+        # make overwrite lines
+        self.overwrite_le = {}
+        for i in range(self.N_OVERWRITE):
+            self.overwrite_le[i] = QtWidgets.QLineEdit()
+            self.overwrite_le[i].setMaximumSize(QtCore.QSize(16777215, 16777215))
+            self.overwrite_le[i].setFocusPolicy(QtCore.Qt.NoFocus)
+            self.overwrite_le[i].setLayoutDirection(QtCore.Qt.LeftToRight)
+            self.overwrite_le[i].setReadOnly(True)
+            self.overwrite_le[i].setObjectName('overwrite_le_{}'.format(i))
+            self.layout.addWidget(self.overwrite_le[i], i, 0, 1, 1)
+
+        self.overwrite_cb = {}
+        for i in range(self.N_CB):
+
+            self.overwrite_cb[i] = QtWidgets.QComboBox(self.gridLayoutWidget)
+            self.overwrite_cb[i].setObjectName("overwrite_line_cb_2")
+            self.overwrite_cb[i].addItem("Electric Field Potential Timeseries")
+            self.overwrite_cb[i].addItem("Annotation Timeseries")
+            self.overwrite_cb[i].addItem("Alignment Timeseries")
+            self.overwrite_cb[i].addItem("Other Timeseries Data")
+            self.overwrite_cb[i].addItem("Stimulus Timeseries")
+            self.layout.addWidget(self.overwrite_cb[i], i, 1, 1, 1)
+
+        self.setLayout(self.layout)
+
+
+
+
+
 
 
 #code for MatlabStep2
@@ -3452,6 +3553,8 @@ if __name__ == '__main__':
     import sys
     #PyQt5.QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
     app = QtWidgets.QApplication(sys.argv)
+
+    # TODO: What are these and why are they set here?
     headerfilename = ''
     session_start_time = ''
     timestamps_reference_time = ''
